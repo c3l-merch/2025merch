@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0058)https://iccomotto.com/s/id/question/answer/999335?ima=1202 -->
+<!-- goto merchpoint -->
 <html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- iccomotto.com に対する OneTrust Cookie 同意通知の始点 -->
 <script type="text/javascript" async="" src="./td.min.js"></script><script type="text/javascript" async="" src="./js"></script><script async="" src="./gtm.js"></script><script type="text/javascript" src="./OtAutoBlock.js"></script>
 <script src="./otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="996be375-5668-429a-92c4-6c14f13326cd"></script>
@@ -2261,6 +2261,15 @@ span {
               
               <button id="trigger" class="return" style="background-color: #e70000" onclick="location.href='./used.html?' + 'name=' + preFullName.value + '&startTime=' + merchstarttime.value + 
                   '&endTime=' + merchendtime.value">スタッフ専用</button>
+          <script>
+                var date = new Date(); 
+                var youbi = ['日', '月', '火', '水', '木', '金', '土'];
+                var fullName = document.querySelector('#fullname'); 
+              merchdate.onload = function() {
+                  merchdate.innerHTML = date.getMonth() + 1 + '月' + date.getDate() + '日(' + youbi[date.getDay()] + ')<br>' + merchstarttime.value + '〜' + merchendtime.value;
+                  console.log('merchdate loaded and processed.');
+              }
+          </script>
         <!--merchpoint
 
           var userName = urlParams.get('name'); // This will return name from index.html with ?name='$value'
