@@ -2265,9 +2265,9 @@ span {
                 var date = new Date(); 
                 var youbi = ['日', '月', '火', '水', '木', '金', '土'];
                 var fullName = document.querySelector('#fullname'); 
-              merchdate.onload = function() {
+              window.onload = function() {
                   merchdate.innerHTML = date.getMonth() + 1 + '月' + date.getDate() + '日(' + youbi[date.getDay()] + ')<br>' + merchstarttime.value + '〜' + merchendtime.value;
-                  console.log('merchdate loaded and processed.');
+                  console.log('window onload triggered, and merchdate is processed.');
               }
           </script>
         <!--merchpoint
